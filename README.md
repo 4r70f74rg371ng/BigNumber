@@ -134,6 +134,22 @@ char* base58_decode(char* base58str) {
 
 	return result;
 }
+
+void test_encode_decode_base58() {
+	char* sstr = NULL;
+	char* sstr2 = NULL;
+
+	sstr = base58_encode("test");
+
+	printf("encode of base58: '%s'\n", sstr);
+
+	sstr2 = base58_decode(sstr);
+
+	printf("decode of base58: '%s'\n", sstr2);
+
+	free(sstr);
+	free(sstr2);
+}
 ```
 
 ### other example
