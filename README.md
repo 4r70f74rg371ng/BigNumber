@@ -150,6 +150,7 @@ void test_encode_decode_base58() {
 	free(sstr);
 	free(sstr2);
 }
+
 ```
 
 ### other example
