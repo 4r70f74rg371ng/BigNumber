@@ -15,9 +15,16 @@ In C++ project just add six files: BigInt.c, BigInt.h, BigInteger.c, BigInteger.
 #include "BigInt.h"
 
 int main(){
-   CBigInt a = 123456789012345678901234567890_cbi;
-   cout << a << " " << a*a << endl;
-   cout << 123456789012345678901234567890_cbi << " " << 123456789012345678901234567890_cbi* 123456789012345678901234567890_cbi << endl;
+   BigInt* total = bigint_initial_dec_string("2");
+   int i;
+
+   // 100 digital
+   for (i = 0; i < 1000; i++) {
+      bigint_mul_one_into(total, 100);
+   }
+   bigint_sqrt_into(total);
+   bigint_print(total); printf("\n");
+   bigint_cleanup_pointer(&total);
    return 0;
 }
 ```
