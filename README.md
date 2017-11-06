@@ -18,7 +18,7 @@ int main(){
    BigInt* total = bigint_initial_dec_string("2");
    int i;
 
-   // 100 digital
+   // 1000 digital
    for (i = 0; i < 1000; i++) {
       bigint_mul_one_into(total, 100);
    }
